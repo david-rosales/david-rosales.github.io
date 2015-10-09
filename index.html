@@ -1,174 +1,301 @@
-<!DOCTYPE html>
-<html lang="en-us">
+<html>
 	<style>
-		* {font-family:"Tw Cen MT";margin:0px;}
-		#title {
-			z-index:100;
-			background-color:#eeeeee;
-			color:black;
-			width:100%;
-			height: 75px;
-			margin-top:0px;
-			text-align:center;
-			position:fixed;
-			line-height:75px;
+		{
+			overflow:hidden;
+			display:inline-block;
 		}
+		
+		*{
+			font-family:"Tw Cen MT";
+			margin:0;
+		}
+		
+		html{
+			background-image: url(images/background.jpg);
+			background-repeat:no-repeat;
+			background-size: 100% 100%;
+			background-attachment:fixed;
+			
+		}
+		
+		body{
+			top:0;
+			
+		}
+		
 		::-webkit-scrollbar {
-			width: 6px;
+			width: 1vw;
 		}
  
 		::-webkit-scrollbar-track {
-			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-			border-radius: 10px;
+			-webkit-box-shadow: inset 0 0 .6vw rgba(51,102,204,0.3); 
+			border-radius: 1.2vw;
 		}
  
 		::-webkit-scrollbar-thumb {
-			border-radius: 10px;
-			background-color:gray;
+			border-radius: 1vw;
+			background-color:#3366CC;
 		}
 		
-		#body{
-			display:inline;
-			
+		#header {
+			top:0;
+			position:fixed;
+			margin-top:0;
+			display:inline-block;
+			width:100%;
+			font-family:"Tw Cen MT";
+			text-align:right;
+
 		}
-	</style>
-	<div id="title">
-		<h1>David Anekin Rosales</h1>
+		
+		#header #buttons{
+			margin-right:1.5vw;
+			float:right;
+		}
+		
+		#header #buttons button{
+			border-width:.5vw;
+			vertical-align:middle;
+			font-size:2.5vw;
+			font-weight:bold;
+			margin:.7vw;
+			height:auto;
+			color:black;
+			display:block;
+			background-color:#3366CC;
+			border-color:#3366CC;
+			padding:.2vw;
+			float:right;
+			width:15vw;
+		}
+		
+		#header #buttons button:disabled{
+			background-color:#7094DB;
+			border-color:#7094DB #5C85D6 #5C85D6 #7094DB;
+		}
+		
+		#header #buttons button[disabled]:hover{
+			background-color:#7094DB;
+			border-color:#7094DB #5C85D6 #5C85D6 #7094DB;
+		}
+		
+		#header #buttons button:hover{
+			background-color:#4775D1;
+			border-color:#4775D1;
+		}
+		
+		#header h1{
+			background-color:#3366CC;
+			border-color:#3366CC rgba(0,0,0,0.2) rgba(0,0,0,0.2) #3366CC;
+			border-style:solid solid solid solid;
+			border-width:.5vw;
+			width: calc(100% - 21vw);
+			margin:.5vw;
+			margin-left:1vw;
+			height:4vw;
+			vertical-align:center;
+			text-align:center;
+			display:block;
+			font-size:4vw;
+			float:left;
+		}
+		
+		#body {
+			color:black;
+			margin:1vw;
+			margin-top:2vw;
+		}
+		
+		#body h1{
+			font-size:3vw;
+			font-weight:bold;
+		}
+		
+		#body p{
+			font-size:2.5vw;
+		}
+		
+		#body #info{
+			background-color: rgba(255,255,255,.45);
+			float:left;
+			height:auto;
+			width: calc(100% - 21vw);
+			padding:1vw;
+			margin-top:5vw;
+		}
+		
+		#body #project_overview{
+			background-color: rgba(255,255,255,.45);
+			float:left;
+			height:auto;
+			margin-top:2vw;
+			width: calc(100% - 21vw);
+			padding:1vw;
+		}
+		
+		#body #project_showcase{
+			background-color: rgba(255,255,255,.45);
+			float:left;
+			height:auto;
+			margin-top:2vw;
+			width: calc(100% - 21vw);
+			padding:1vw;
+			margin-bottom:2vw;
+		}
+		
+		#body #project_showcase #item1{
+			background-color: rgb(51, 102, 204);
+			float:left;
+			padding-top:38vw;
+			width: calc(100% - 2vw);
+			
+			margin:1vw;
+		}
+		
+		#body #project_showcase #item2 #image{
+			background-image: url(images/ww2.png);
+			background-size:100% 100%;
+			background-repeat:no-repeat;
+			float:left;
+			width: 50%;
+			height:18.75vw;
+			margin:0;	
+		}
+	
+		#body #project_showcase #item2 #text{
+			float:left;
+			width:calc(50% - 2vw);
+			padding:1vw;
+		}
+		
+		#body #project_showcase #item2 #text h1{
+			font-size:1.8vw;
+		}
+		
+		#body #project_showcase #item2 #text p{
+			font-size:1.57vw;
+		}
+		
+		#body #project_showcase #item2 #text a{
+			padding-top:1vw;
+			font-size:1.57vw;
+		}
+		
+		#body #project_showcase #item2{
+			background-color: rgba(51, 102, 204,0.8);
+			float:left;
+			height:auto;
+			width: calc(50% - 2vw);
+			padding:0;
+			margin:1vw;
+		}
+		
+		#body #project_showcase #item3{
+			background-color: rgba(51, 102, 204,0.8);
+			float:left;
+			height:4vw;
+			width: calc(50% - 2vw);
+			padding:0;
+			margin:1vw;
+		}
+		
+		#footer{
+			background-color:rgba(255,255,255,.45);
+			padding:0;
+			padding-top:1vw;
+			padding-bottom:1vw;
+			margin:0;
+			margin-bottom:1vw;
+			width:100%;
+			text-align:center;
+			font-size:2vw;
+			float:left;
+		}
+	<div id="background">
+		<div id="layer">
+		</div>
 	</div>
-    <head>
-		<link rel="stylesheet" type="text/css" href="stylesheets/index.css">
-		<title>David A. Rosales - Software Developer</title>
+	</style>
+	<header>
 		<div id="header">
-			<style>				
-				#buttons{
-					z-index:99;
-					line-height:30px;
-					position:fixed;
-					right:0;
-					top:75px;
-					width:100px;
-					padding:5px;
-				}
-				
-				#buttons button{
-					vertical-align:middle;
-					font-size:20px;
-					font-weight:bold;
-					border:10px;
-					border-radius: 10px;
-					margin:5px;
-					height:30px;
-					width:90px;
-					background-color:#5C7DBD;
-					outline:none;
-				}
-				
-				#buttons button:disabled{
-					color:black;
-					background-color:#D63333;
-				}
-				
-				#buttons button[disabled]:hover{
-					color:black;
-					background-color:#D63333;
-					box-shadow:none;
-				}
-				 
-				#buttons button:hover{
-					color:gray;
-					background-color:#7D97CA;
-					box-shadow:0px 3px 1px black;
-				}
-			</style>
+			<h1>David Anekin Rosales</h1>
 			<div id="buttons">
-				<div id="row1">
-					<form method="get" action="index.html">
-						<button type="submit" disabled>About</button>
-					</form>
+				<form method="get" action:"index.html">
+					<button type="submit" disabled>
+						ABOUT
+					</button>
+				</form>
+				<form method="get" action:"index.html">
+					<button type="submit">
+						PROJECTS
+					</button>
+				</form>
+				<form method="get" action:"index.html">
+					<button type="submit">
+						CONTACT
+					</button>
+				</form>
+				<form method="get" action:"Resume.pdf">
+					<button type="submit">
+						RESUME
+					</button>
+				</form>
+				<form method="get" action:"index.html">
+					<button type="submit">
+						GITHUB
+					</button>
+				</form>
+				<form method="get" action:"index.html">
+					<button type="submit">
+						SPIGOT
+					</button>
+				</form>
+			</div>
+		</div>
+	</header>
+	<body>
+		<div id="body">
+			<div id="info">
+				<h1>//Developer</h1>
+				<p>
+				My name is <b>David Anekin Rosales</b> and I am currently a first-year at <b>Massachusetts Institute of Technology</b>.
+				</p>
+				<p>
+				I am studying <b>Computer Science</b> and have experience programming <b>Java</b>, <b>Python</b>, <b>HTML</b>, and <b>CSS</b>.
+				</p>
+			</div>
+			<div id="project_overview">
+				<h1>//Projects</h1>
+				<p>
+				I have done plenty of projects since I first started programming. My projects range from <b>Java Swing</b> applications to <b>Minecraft Bukkit</b> plugins.
+				</p>
+			</div>
+			<div id="project_showcase">
+				<div id="item1">
+					<div id="image">
+					</div>
 				</div>
-				<div id="row2">
-					<form method="get" action="projects.html">
-						<button type="submit">Projects</button>
-					</form>
-					<form method="get" action="contact.html">
-						<button type="submit">Contact</button>
-					</form>
+				<div id="item2">
+					<div id="image">
+					</div>
+					<div id="text">
+						<h1>World War II: Artillery</h1>
+						<p>A game created for the 2015 MESA Team Greenfoot Competition. The game won second place at regionals.</p>
+						<a href="index.html" title="World War II: Artillery" id="link">view more...</a>
+					</div>
 				</div>
-				<div id="row3">
-					<form method="get" action="Resume.pdf">
-						<button type="submit">Resume</button>
-					</form>
-					<form method="get" action="https://github.com/david-rosales">
-						<button type="submit">Github</button>
-					</form>
-					<form method="get" action="https://www.spigotmc.org/members/david_rosales.12187/">
-						<button type="submit">Spigot</button>
-					</form>
+				<div id="item3">
+					<div id="image">
+					</div>
+					<div id="text">
+					</div>
 				</div>
 			</div>
 		</div>
-	</head>
-	<body id="body">
-		<style>
-			#brief_info {
-				margin:10px;
-				margin-top:85px;
-				z-index:80;
-				float:left;
-				height:auto;
-				width: calc(100% - 140px);
-				background-color:rgba(0, 0, 255, .1);
-				margin-bottom:5px;
-				padding:10px;
-			}
-			
-						
-			#brief_info h1{
-				font-size:25px;
-			}
-			
-			#brief_info p{
-				margin:0;
-				font-size:20px;
-			}
-			
-			#projects {
-				margin:5px;
-				margin-left:10px;
-				z-index:80;
-				float:left;
-				height:auto;
-				width: calc(100% - 140px);
-				background-color:rgba(0, 0, 255, .1);
-				padding:10px;
-			}
-			
-			#projects h1{
-				font-size:25px;
-			}
-			
-			#projects p{
-				 margin:0;
-				 font-size:20px;
-			}
-			
-		</style>
-		<div id="brief_info">
-			<h1>//Developer</h1>
-			<p>
-				I am currently a first-year student at <b>Massacusetts Institute of Technology</b> studying <b>Computer Science</b>.
-			</p>
-			<p>
-				I have experience programming with <b>Java</b>, <b>Python</b>, <b>HTML</b>, and <b>CSS</b>.
-			</p>
-		</div>
-		<div id="projects">
-			<h1>//Projects</h1>
-			<p>
-				I have a lot of <b>projects</b>!
-			</p>
-		</div>
 	</body>
 	<footer>
+		<div id="footer">
+			<p>Website created by David Rosales</p>
+		</div>
 	</footer>
 </html>
