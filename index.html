@@ -38,7 +38,6 @@
 		}
 		
 		#header {
-			z-index:100;
 			top:0;
 			position:fixed;
 			margin-top:0;
@@ -85,7 +84,12 @@
 			border-color:#4775D1;
 		}
 		
-		#header h1{
+        #header #title{
+            z-index:1000;
+            position: relative;
+        }
+        
+		#header #title h1{
 			background-color:#3366CC;
 			border-color:#3366CC rgba(0,0,0,0.2) rgba(0,0,0,0.2) #3366CC;
 			border-style:solid solid solid solid;
@@ -143,7 +147,7 @@
 			width: calc(100% - 20.5vw);
 			padding:1vw;
 			margin-bottom:2vw;
-			position: relative;
+			
 		}
 		
 		
@@ -151,9 +155,8 @@
 		#body #project_showcase #item1{
 			background-color: rgb(51, 102, 204);
 			float:left;
-			
+
 			width: calc(100% - 2vw);
-			
 			margin:1vw;
 		}
 		
@@ -163,8 +166,7 @@
 			float:left;
 			width: 100%;
 			height: 0;
-			padding-bottom:62.5%;
-			margin:;	
+			padding-bottom:62.5%;	
 			background-size:cover;
 		}
 		
@@ -176,14 +178,14 @@
 			margin:.7vw;
 			height:auto;
 			color:black;
-			display:block;
 			background-color:#3366CC;
 			border-color:#3366CC;
 			padding:.2vw;
 			float:right;
 			width:15vw;
-			position:relative;
-			bottom:0;
+			position:absolute;
+			bottom:auto;
+            right: 21.5vw;
 		}
 		
 		#body #project_showcase button{
@@ -214,6 +216,11 @@
 		}
 		
 		#body #project_showcase button:hover{
+			background-color:#4775D1;
+			border-color:#4775D1;
+		}
+        
+        #body #project_showcase #item1 button:hover{
 			background-color:#4775D1;
 			border-color:#4775D1;
 		}
@@ -291,7 +298,9 @@
 	</style>
 	<header>
 		<div id="header">
-			<h1>David Anekin Rosales</h1>
+            <div id="title">
+                <h1>David Anekin Rosales</h1>
+            </div>
 			<div id="buttons">
 				<form method="get" action="index.html">
 					<button type="submit" disabled>
