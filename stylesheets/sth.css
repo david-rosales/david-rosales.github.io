@@ -127,11 +127,56 @@ body #showcase div button{
     margin: 2vw; 
 }
 
-body #showcase div #text{
+body #showcase div #image1{
+    position: absolute;
+    background-color: rgba(51,102,204,.7);
+    background-image: url(images/sth.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    left:1vw;
+    top:0;
+}
+
+body #showcase div #image2{
     position: absolute;
     left: 39vw;
     top:0;
-    background-color: rgba(51,102,204,.7)
+    background-color: rgba(51,102,204,.7);
+    background-image: url(images/sth.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+body #showcase #one #image1{
+    background-image: url(images/sth/1-1.png);
+}
+
+body #showcase #one #image2{
+    background-image: url(images/sth/1-2.png);
+}
+
+body #showcase #two #image1{
+    background-image: url(images/sth/2-1.png);
+}
+
+body #showcase #two #image2{
+    background-image: url(images/sth/2-2.png);
+}
+
+body #showcase #three #image1{
+    background-image: url(images/sth/3-1.png);
+}
+
+body #showcase #three #image2{
+    background-image: url(images/sth/3-2.png);
+}
+
+body #showcase #four #image1{
+    background-image: url(images/sth/4-1.png);
+}
+
+body #showcase #four #image2{
+    background-image: url(images/sth/4-2.png);
 }
 
 body #showcase #main{
@@ -163,30 +208,6 @@ body #showcase h1{
 
 body #showcase p{
     font-size: 2.5vw;
-}
-
-body #showcase #sth #image{
-    background-image: url(images/sth.jpg)
-}
-
-body #showcase #ww2 #image{
-    background-image: url(images/ww2.png)
-}
-
-body #showcase #trading #image{
-    background-image: url(images/trading.png);
-}
-
-body #showcase #slender #image{
-    background-image: url(images/slender.png);
-}
-
-body #showcase #ep #image{
-    background-image: url(images/ep.png);
-}
-
-body #showcase #cs #image{
-    background-image: url(images/cs.png);
 }
 
 footer{

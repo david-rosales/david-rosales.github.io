@@ -1,0 +1,220 @@
+*{
+    font-family:"Tw Cen MT";
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+	width: 1vw;
+}
+ 
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 .6vw rgba(51,102,204,0.3); 
+	border-radius: 1.2vw;
+}
+ 
+::-webkit-scrollbar-thumb {
+	border-radius: 1vw;
+	background-color:#3366CC;
+}
+
+html{
+    background-image: url(images/background.jpg);
+    background-size: 100% 100%; 
+    background-repeat:no-repeat;
+	background-attachment:fixed;
+}
+
+header{
+    position: fixed;
+    z-index: 10;
+}
+
+header #title {
+    position: fixed;
+    top:0;
+    background-color:#3366CC;
+    border-width: .5vw;
+	border-color:#3366CC rgba(0,0,0,0.2) rgba(0,0,0,0.2) #3366CC;
+    border-style: solid;
+    font-weight: bold;
+    float: left;
+    width: 79vw;
+    margin: 1vw;
+    text-align: center;
+}
+
+header #title h1 {
+    font-size: 4vw;
+}
+
+header #buttons {
+    position:fixed;
+    right:0;
+    width:15vw;
+    font-size: 2.5vw;
+    top:0;
+    margin-right: 3vw;
+}
+
+body{
+    position: relative;
+}
+
+body #info {
+    position: relative;
+    top: 7vw;
+}
+
+body #info div{
+    position: relative;
+    left: 1vw;
+    background-color:rgba(255,255,255,.45);
+    width: 76vw;
+    margin: 1vw;
+    padding: 1vw;
+}
+
+body #info h1{
+    font-size: 3.5vw;
+    color: black;
+}
+
+body #info p{
+    font-size: 2.5vw;
+}
+
+body #showcase{
+    position: relative;
+    top: 7vw;
+}
+
+body #showcase div{
+    position: relative;
+    left: 1vw;
+    background-color:rgba(255,255,255,.45);
+    width: 74vw;
+    height: 19.125vw;
+    margin: 1vw;
+    padding: 2vw;
+    padding-top: 4vw;
+}
+
+body #showcase div div{
+    position: relative;
+    left: 1vw;
+    background-color:rgba(0,0,0,0);
+    width: 34vw;
+    height: 19.125vw;;
+    margin: 1vw;
+    padding: 1vw;
+    margin-top: 2vw;
+}
+
+body #showcase div #image{
+    position: absolute;
+    background-color: rgba(51,102,204,.7);
+    background-image: url(images/sth.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    left:1vw;
+    top:0;
+}
+
+body #showcase div button{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 2vw; 
+}
+
+body #showcase div #text{
+    position: absolute;
+    left: 39vw;
+    top:0;
+    background-color: rgba(51,102,204,.7)
+}
+
+body #showcase #main{
+    position: relative;
+    left: 1vw;
+    background-color:rgba(255,255,255,.45);
+    width: 74vw;
+    height: 41.625vw;
+    margin: 1vw;
+    padding: 2vw;
+    padding-top: 4vw;
+}
+
+body #showcase #main #image{
+    width: 70vw;
+    height: 39.625vw;
+    margin: 1vw;
+    margin-top: 2vw;
+    padding: 2vw;
+}
+
+body #showcase #main #text{
+    background-color: rgba(0,0,0,0);
+}
+
+body #showcase h1{
+    font-size: 3vw;
+}
+
+body #showcase p{
+    font-size: 2.5vw;
+}
+
+body #showcase #contactMC #image{
+    background-image: url(images/contactMC.png);
+}
+
+body #showcase #contactJS #image{
+    background-image: url(images/contactJS.png);
+}
+
+body #showcase #contactO #image{
+    background-image: url(images/contactO.png);
+}
+
+footer{
+    position: relative;
+    top:8vw;
+    z-index: 0;
+    background-color:rgba(255,255,255,.45);
+    text-align: center;
+    font-size:2vw;
+    width: calc(100%-2vw);
+    padding: 1vw;
+    bottom: 0;
+    margin-bottom: 2vw;
+}
+
+button{
+    margin: 1vw;
+    margin-bottom: .5vw;
+    font-size: 2.5vw;
+    font-weight: bold;
+    height: auto;
+    width: 15vw;
+    background-color:#3366CC;
+    border-width: .5vw;
+	border-color:#3366CC rgba(0,0,0,0.2) rgba(0,0,0,0.2) #3366CC;
+    border-style: solid;
+}
+
+button:disabled{
+    color: black;
+    background-color:#7094DB;
+    border-color:#7094DB #5C85D6 #5C85D6 #7094DB;
+}
+
+button[disabled]:hover{
+	background-color:#7094DB;
+	border-color:#7094DB #5C85D6 #5C85D6 #7094DB;
+}
+		
+button:hover{
+	background-color:#4775D1;
+	border-color:#4775D1 rgba(0,0,0,0.2) rgba(0,0,0,0.2) #4775D1;
+}
