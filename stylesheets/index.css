@@ -214,3 +214,7 @@ button:hover{
 	background-color:#4775D1;
 	border-color:#4775D1 rgba(0,0,0,0.2) rgba(0,0,0,0.2) #4775D1;
 }
+
+nav > div.nav-wrapper {
+    padding-left: 10px;
+}

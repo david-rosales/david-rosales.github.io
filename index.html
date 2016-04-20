@@ -2,23 +2,38 @@
     <title>David A. Rosales - Home</title>
     <head>
         <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+
         <link rel="icon" type="image/x-icon" href="favicon.ico">
+          <!--Import Google Icon Font-->
+      	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">     
+        <!-- Compiled and minified CSS -->
+  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+     		
     </head>
-    <header>
-        <!-- Title and Buttons -->
-        <div id="title">
-            <h1>David Anekin Rosales</h1>
-        </div>
-        <div id="buttons">
-            <form method="get" action="index.html"><button type="submit" disabled>HOME</button></form>
-            <form method="get" action="projects.html"><button type="submit">PROJECTS</button></form>
-            <form method="get" action="contact.html"><button type="submit">CONTACT</button></form>
-            <form method="get" action="Resume.pdf" target="_blank"><button type="submit">RESUME</button></form>
-            <form method="get" action="https://github.com/david-rosales/" target="_blank"><button type="submit">GITHUB</button></form>
-            <form method="get" action="https://www.spigotmc.org/members/david_rosales.12187/" target="_blank"><button type="submit">SPIGOT</button></form>
-        </div>
-    </header>
+
     <body>
+		<nav>
+		    <!-- Title and Buttons -->
+		    <div class="nav-wrapper">
+			    <a href="#!" class="brand-logo">David Anekin Rosales</a>
+			    <a href="#" data-activates="mobile-sidebar" class="button-collapse"><i class="material-icons">menu</i></a>
+			    <ul class="right hide-on-med-and-down">
+			    	<li><a href="#">HOME</a></li>
+			    	<li><a href="projects.html">PROJECTS</a></li>
+			    	<li><a href="contact.html">CONTACT</a></li>
+			    	<li><a href="Resume.pdf">RESUME</a></li>
+			    	<li><a href="https://github.com/david-rosales">GITHUB</a></li>
+			    	<li><a href="https://www.spigotmc.org/members/david_rosales.12187">SPIGOT</a></li>
+			    </ul>
+			    <ul class="side-nav" id="mobile-sidebar">
+			    	<li><a href="#">Home</a></li>
+			    	<li><a href="projects.html">Projects</a></li>
+			    	<li><a href="contact.html">Contact</a></li>
+			    	<li><a href="Resume.pdf">Resume</a></li>
+			    	<li><a href="https://github.com/david-rosales">Github</a></li>
+			    	<li><a href="https://www.spigotmc.org/members/david_rosales.12187">Spigot</a></li>
+		    </div>
+		</nav>
         <!-- Page information -->
         <div id="info">
             <div id="">
@@ -61,9 +76,11 @@
                 </div>
             </div>
         </div>
+        <!-- Compiled and minified JavaScript -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  		<script>
+  			$(".button-collapse").sideNav();
+  		</script>
     </body>
-    <footer>
-        <!--  Created by ... -->
-        <a>Website created by David A. Rosales</a>
-    </footer>
 </html>
